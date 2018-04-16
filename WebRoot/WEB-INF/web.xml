@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Mvc简单架构</display-name>
+  <welcome-file-list>
+    <welcome-file>view/Login.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 登录控制器 -->
+  <servlet>
+  	<servlet-name>LoginControlServlet</servlet-name>
+  	<servlet-class> cn.pan.controlServlet.LoginControlServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginControlServlet</servlet-name>
+  	<url-pattern>/LoginControlServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 跳转至主页控制器-->
+  <servlet>
+  	<servlet-name>ToWeControlServlet</servlet-name>
+  	<servlet-class> cn.pan.controlServlet.ToWeControlServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ToWeControlServlet</servlet-name>
+  	<url-pattern>/ToWeControlServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 安全退出清除session的控制器-->
+  <servlet>
+  	<servlet-name>LogoutControlServlet</servlet-name>
+  	<servlet-class> cn.pan.controlServlet.LogoutControlServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LogoutControlServlet</servlet-name>
+  	<url-pattern>/LogoutControlServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
